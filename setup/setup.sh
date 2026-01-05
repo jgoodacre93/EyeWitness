@@ -102,6 +102,7 @@ install_system_deps() {
             
             # Browser and driver
             print_info "Installing Chromium browser and ChromeDriver..."
+            print_info "Note: If you see errors with apt installation do not panic. The installer attempts to install using multiple methods. Look at installer script errors only."
             apt-get install -y chromium-browser chromium-chromedriver || \
             apt-get install -y chromium chromium-driver || {
                 print_warning "Package manager chromium installation failed, trying alternative names..."
